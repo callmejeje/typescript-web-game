@@ -1,10 +1,9 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 
 function App() {
-  let bool: any;
+  let bool: unknown;
   const [word, setWord] = useState("바다");
   const [answer, setAnswer] = useState("");
   const [correct, setCorrect] = useState(bool);
@@ -13,7 +12,7 @@ function App() {
     setAnswer(e.target.value);
   };
 
-  const onClickCorrect = (e: any) => {
+  const onClickCorrect = () => {
     if (answer[0] === word[word.length - 1]) {
       setCorrect(true);
       setWord(answer);

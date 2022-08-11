@@ -4,7 +4,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  let bool: any = undefined;
+  let bool: unknown = undefined;
   const [answer, setAnswer] = useState(undefined);
   const [correct, setCorrect] = useState(bool);
 
