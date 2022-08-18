@@ -28,10 +28,14 @@ function App() {
     // 3자리 숫자가 아니면 false
     // 중복되는 숫자 있으면 false
 
-    // if (isNaN(input.join(""))) {
-    //   console.log("isNaN");
-    //   return false;
-    // }
+    if (
+      typeof input.join("") === "string" &&
+      Number.isNaN(Number(input.join("")))
+    ) {
+      console.log("isNaN");
+      return false;
+    }
+
     if (input.length !== 3) {
       console.log("length !== 3");
       return false;
